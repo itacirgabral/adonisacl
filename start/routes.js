@@ -18,4 +18,4 @@ const Route = use('Route')
 
 Route.post('users', 'UserController.store')
 Route.post('sessions', 'SessionController.store')
-Route.post('projects', 'ProjectController.store').middleware('auth')
+Route.resource('projects', 'ProjectController').middleware('auth')
